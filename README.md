@@ -47,5 +47,3 @@
 - 实时的接口调用和监控管理功能，提供性能数据。
 
 
-## 前端地址
-https://github.com/heweijiqn/http-front
