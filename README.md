@@ -5,14 +5,12 @@ http-backend 是一个后端服务，旨在提供强大的HTTP请求处理和管
 该项目的软件架构遵循典型的三层架构：
 
 表示层：处理用户的HTTP请求和返回相应的HTTP响应。
+
 业务逻辑层：实现具体的业务逻辑，协调数据处理、调用数据访问层操作等。
+
 数据访问层：负责与数据库交互，实现数据读写操作。
-安装教程
-克隆项目到本地：git clone https://github.com/your-username/http-backend.git
-进入项目目录：cd http-backend
-安装依赖：npm install
-配置数据库连接：在 config 目录下的 database.js 文件中配置数据库连接信息。
-启动项目：npm start
+## 启动教程
+
 ## 使用说明
 Swagger导入功能：上传Swagger文档文件，系统自动生成接口信息。
 权限分配功能：将用户划分为不同角色，分配权限以确保系统安全性。
