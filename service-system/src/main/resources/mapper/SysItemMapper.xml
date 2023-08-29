@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hwj.system.mapper.SysItemMapper">
+
+
+    <resultMap id="sysItemMap" type="com.hwj.model.system.SysItem" autoMapping="true"></resultMap>
+
+    <select id="selectPage" resultMap="sysItemMap">
+        SELECT id, name, description, create_time, update_time, is_deleted
+        FROM sys_item
+        <where>
+            <if test="vo.name != null and vo.name != ''">
+                AND name LIKE CONCAT('%', #{vo.name}, '%')
+            </if>
+            <if test="vo.description != null and vo.description != ''">
+                AND description LIKE CONCAT('%', #{vo.description}, '%')
+            </if>
+            AND is_deleted = 0
+            <!-- Other conditions can be added here... -->
+        </where>
+        ORDER BY id ASC
+    </select>
+</mapper>

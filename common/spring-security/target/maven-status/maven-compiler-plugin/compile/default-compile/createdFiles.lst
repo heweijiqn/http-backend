@@ -1,0 +1,6 @@
+com/hwj/system/custom/CustomUser.class
+com/hwj/system/config/WebSecurityConfig.class
+com/hwj/system/service/LoginLogService.class
+com/hwj/system/custom/CustomMd5PasswordEncoder.class
+com/hwj/system/fillter/TokenLoginFilter.class
+com/hwj/system/fillter/TokenAuthenticationFilter.class

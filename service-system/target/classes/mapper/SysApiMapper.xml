@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hwj.system.mapper.SysApiMapper">
+
+    <resultMap id="sysApiMap" type="com.hwj.model.system.SysApi" autoMapping="true"></resultMap>
+
+    <select id="selectPage" resultMap="sysApiMap">
+        SELECT id, api_name, path, http_method, parameter_name, parameter_type, response_data_structure,
+        create_time, update_time, is_deleted,request_parameters
+        FROM sys_api
+        <where>
+            <if test="vo.apiName != null and vo.apiName != ''">
+                AND api_Name LIKE CONCAT('%', #{vo.apiName}, '%')
+            </if>
+            <if test="vo.path != null and vo.path != ''">
+                AND path LIKE CONCAT('%', #{vo.path}, '%')
+            </if>
+            AND is_deleted = 0
+            <!-- Other conditions can be added here... -->
+        </where>
+        ORDER BY id ASC
+    </select>
+
+    <select id="selectApiById" resultMap="sysApiMap">
+        SELECT id, api_name, path, http_method, parameter_name, parameter_type, response_data_structure,
+               create_time, update_time, is_deleted, request_parameters
+        FROM sys_api
+        WHERE id = #{id}
+    </select>
+
+</mapper>

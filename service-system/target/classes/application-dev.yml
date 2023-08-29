@@ -1,0 +1,27 @@
+server:
+  port: 8800
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: >-
+      jdbc:mysql://${MYSQL_HOST}:${MYSQL_PORT}/interface?useUnicode=true&characterEncoding=utf8&autoReconnect=true
+    username: '${MYSQL_USER}'
+    password: '${MYSQL_PASSWORD}'
+    jackson:
+      date-format: 'yyyy-MM-dd HH:mm:ss'
+      time-zone: GMT+8
+  redis:
+    host: '${REDIS_HOST}'
+    port: '${REDIS_PORT}'
+    database: 0
+    timeout: 1800000
+    password: '${REDISCLI_AUTH}'
+    jedis:
+      pool:
+        max-active: 20
+        max-wait: -1
+        max-idle: 5
+        min-idle: 0

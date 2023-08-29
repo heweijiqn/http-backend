@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hwj.system.mapper.SysMockMapper">
+
+    <resultMap id="sysMockMap" type="com.hwj.model.system.SysMock" autoMapping="true"></resultMap>
+
+    <select id="selectPage" resultMap="sysMockMap">
+        SELECT id, name, mock_data, create_time, update_time, is_deleted
+        FROM sys_mock
+        <where>
+            <if test="vo.name != null and vo.name != ''">
+                AND name LIKE CONCAT('%', #{vo.name}, '%')
+            </if>
+            AND is_deleted = 0
+            <!-- Other conditions can be added here... -->
+        </where>
+        ORDER BY id ASC
+    </select>
+
+    <select id="selectMockDataByApiName" resultMap="sysMockMap">
+        SELECT  id, name, mock_data, create_time, update_time, is_deleted
+        FROM sys_mock
+        WHERE name = #{name} AND is_deleted = 0
+    </select>
+
+
+</mapper>
