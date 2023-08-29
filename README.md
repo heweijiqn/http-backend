@@ -13,10 +13,10 @@
 ## 安装教程
 
 1. 克隆项目到本地：`git clone https://github.com/your-username/http-backend.git`
-2. 进入项目目录：`cd http-backend`
-3. 安装依赖：`npm install`
-4. 配置数据库连接：在 `config` 目录下的 `database.js` 文件中配置数据库连接信息。
-5. 启动项目：`npm start`
+2. 下载maven包
+3. 修改配置为本地配置
+4. 运行启动类
+
 
 ## 使用说明
 
@@ -28,18 +28,16 @@
 - 接口增删改查功能：管理员和成员可以管理接口，包括创建、编辑、删除接口的信息。
 - 接口调用和监控管理功能：成员可以调用接口进行测试，并监控接口性能数据。
 
-## 参与贡献
+## 贡献者
+邱慧敏
+负责开发swagger导入，项目管理，接口管理及mock服务的优化
+何伟健
+负责开发权限分配、成员管理、项目管理、角色管理以及接口的增删改查，及接口调用和监控管理
+黄苏梦
+负责ui界面的设计，数据库的设计及配置动态路由
 
-欢迎贡献！请遵循以下步骤：
 
-1. Fork 项目到自己的仓库。
-2. 创建一个新的分支：`git checkout -b feature/your-feature-name`
-3. 进行代码修改和改进。
-4. 提交您的修改：`git commit -m "描述您的修改"`
-5. 将您的修改推送到您的仓库：`git push origin feature/your-feature-name`
-6. 提交 Pull Request，我们会审阅您的修改并合并到主分支。
-
-## 特技
+## 特点
 
 - 强大的Swagger导入功能，简化接口信息管理。
 - 灵活的权限分配系统，确保系统的安全性。
@@ -48,4 +46,5 @@
 - 实时的接口调用和监控管理功能，提供性能数据。
 
 
-
+## 前端地址
+https://github.com/heweijiqn/http-front
