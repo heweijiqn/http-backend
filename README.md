@@ -2,6 +2,9 @@
 
 `http-backend` 是一个后端服务，旨在提供强大的HTTP请求处理和管理功能。它可以用于构建RESTful API、管理接口、权限控制等。
 
+`http-front` 是一个前端服务，该项目为http接口管理平台，有成员管理、角色管理、项目管理、接口管理、监控记录、登录记录、权限菜单等多项功能。
+
+前端地址：https://github.com/heweijiqn/http-front
 ## 1024社区在线地址浏览
 
 https://1024code.com/codecubes/kuuwbfg
