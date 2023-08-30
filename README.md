@@ -5,9 +5,7 @@
 `http-front` 是一个前端服务，该项目为http接口管理平台，有成员管理、角色管理、项目管理、接口管理、监控记录、登录记录、权限菜单等多项功能。
 
 前端地址：https://github.com/heweijiqn/http-front
-## 1024社区在线地址浏览
 
-https://1024code.com/codecubes/kuuwbfg
 
 ## 项目界面展示
 
