@@ -28,6 +28,19 @@
 - 接口增删改查功能：管理员和成员可以管理接口，包括创建、编辑、删除接口的信息。
 - 接口调用和监控管理功能：成员可以调用接口进行测试，并监控接口性能数据。
 
+## 后端项目结构
+
+ - src\api\system：进行前端接口的编写
+- src\views\system：进行前端页面的编写
+- store\modules\user.js：新增菜单及按钮处理
+- store\getters.js:新增菜单及按钮处理
+- src\router:开发环境和生产环境组件导入
+- src\permission.js:动态路由生成的脚本
+- src\router:路由配置
+- src\components:动态渲染匹配到的路由组件
+- layout\components\SideBar\index.vue:获取路由配置
+- utils\btn-permission.js:权限判断
+
 ## 贡献者
 - 邱慧敏
 负责开发swagger导入，项目管理，接口管理及mock服务的优化
